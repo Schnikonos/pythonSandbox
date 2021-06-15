@@ -1,6 +1,8 @@
+from functools import total_ordering
 from typing import List, Set
 
 
+@total_ordering   # allows, when defining lt and eq, to have a definition for neq, gt, gte and lte
 class Person:
     def __init__(self, name: str, age: int):
         self.name = name
